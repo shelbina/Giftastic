@@ -1,0 +1,18 @@
+body {
+	background-color:#482e04;
+	color:#0080c0;
+	margin:0 auto;
+}
+.main {
+	width:60%;
+	border-style:solid;
+	border-width:5px;
+	text-align:center;
+	background-color:#eed78f;
+	padding:15px;
+
+}
+
+#gifs-display{
+	display:;
+}
