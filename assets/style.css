@@ -3,8 +3,20 @@ body {
 	color:#0080c0;
 	margin:0 auto;
 }
+
+h1 {
+	background-color:#0080c0;
+	color:#eed78f;
+	font-weight:bolder;
+	padding:15px;
+	font-size:30px;
+	text-align: center;
+}
 .main {
-	width:60%;
+	margin-left:auto;
+	margin-right:auto;
+	margin-top: 20px;
+	max-width:60%;
 	border-style:solid;
 	border-width:5px;
 	text-align:center;
@@ -13,6 +25,10 @@ body {
 
 }
 
-#gifs-display{
-	display:;
+button {
+	background-color:#482e04;
+	color:#eed78f;
+	border: 2px solid #0080c0;
+	margin:4px;
+	padding:4px;
 }
