@@ -2,7 +2,10 @@
 ///create array of strings, related to a topic that interests you, Save it to a var topics.
 var topics = ["Puppies", "Funny", "Ohio State", "I don't know"];
 
-//Your app should take the topics in this array and create buttons in your HTML. 
+//Your app should take the topics in this array and create buttons in your HTML.
+
+  
+  
   function renderButtons() {
     $("#topics-display").empty();
 
@@ -16,6 +19,7 @@ var topics = ["Puppies", "Funny", "Ohio State", "I don't know"];
     $("#gifs-display").empty().css("padding", "10px");
 
 //"https://api.giphy.com/v1/gifs/search?api_key=7325baea40df4feb8f78ff11549a0ee9&q=&limit=10&offset=0&rating=PG&lang=en"
+
     var topic = $(this).attr("data-topic");
     var queryURL = "https://api.giphy.com/v1/gifs/search?q=" +
         topic + "&rating=pg&api_key=7325baea40df4feb8f78ff11549a0ee9&limit=10";
@@ -23,8 +27,7 @@ var topics = ["Puppies", "Funny", "Ohio State", "I don't know"];
         $.ajax({
           url: queryURL,
           method: 'GET'
-        })
-        .done(function(response) {
+        }).done(function(response) {
 
           console.log(response);
 
@@ -43,7 +46,7 @@ var topics = ["Puppies", "Funny", "Ohio State", "I don't know"];
             topicDiv.append(topicImg).append(rating);
             $("#gifs-display").append(topicDiv);
           }
-        });
+        })
   }
 
 //When the user clicks one of the still GIPHY images, the gif should animate. If the user clicks the gif again, it should stop playing.
@@ -77,7 +80,7 @@ var topics = ["Puppies", "Funny", "Ohio State", "I don't know"];
       alert("Enter a new search term!");
     }
 
-  });
+  })
 
   renderButtons();
-});
+})
