@@ -16,8 +16,6 @@ $(document).ready(function() {
    function renderGifs() {
      $("#gifs-display").empty().css("padding", "10px");
  
- //"https://api.giphy.com/v1/gifs/search?api_key=7325baea40df4feb8f78ff11549a0ee9&q=&limit=10&offset=0&rating=PG&lang=en"
- 
      var topic = $(this).attr("data-topic");
      var queryURL = "https://api.giphy.com/v1/gifs/search?q=" +
          topic + "&rating=pg&api_key=7325baea40df4feb8f78ff11549a0ee9&limit=10";
@@ -44,7 +42,7 @@ $(document).ready(function() {
              topicDiv.append(topicImg).append(rating);
              $("#gifs-display").append(topicDiv);
            }
-         })
+         });
    }
  
  //When the user clicks one of the still GIPHY images, the gif should animate. If the user clicks the gif again, it should stop playing.
@@ -78,7 +76,7 @@ $(document).ready(function() {
        alert("Enter a new search term!");
      }
  
-   })
+   });
  
   renderButtons();
- })
+ });
